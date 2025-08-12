@@ -1,0 +1,79 @@
+.parent{
+    -fx-background-color: rgb(150,50,250);
+    -fx-background-radius: 20px;
+}
+
+.sidebar{
+    -fx-background-color: rgb(117,235,170);
+
+}
+
+.darkbg{
+    -fx-background-color: rgb(80, 22, 138);
+}
+
+.searchbar{
+    -fx-background-radius: 100px;
+    -fx-background-color: rgb(117,235,170);
+}
+
+.searcharea{
+    -fx-background-radius: 100px;
+    -fx-background-color: rgba(0,0,0,0.3);
+}
+
+.radius{
+    -fx-background-radius: 10px;
+}
+.transparentbg{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.list-view {
+    -fx-background-color: transparent;
+}
+.list-cell {
+    -fx-background-color: transparent;
+}
+.font-icon-button {
+    -fx-cursor: hand;
+    -fx-font-size: 24px;
+    -fx-transition: 0.3s;
+}
+
+.font-icon-button:hover {
+    -fx-fill: #000000;
+}
+
+.font-icon-button:active {
+    -fx-fill: #000000;
+}
+/* Style the vertical scrollbar */
+.list-view .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-pref-width: 5px;
+}
+
+/* Scrollbar track */
+.list-view .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+
+/* Scrollbar thumb (the draggable part) */
+.list-view .scroll-bar:vertical .thumb {
+    -fx-background-color: rgb(80, 22, 138);
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+
+/* Hover effect on thumb */
+.list-view .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #cccdcf;
+}
+
+/* Optional: hide horizontal scrollbar */
+.list-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-height: 0;
+}
