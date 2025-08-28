@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+<?import org.kordamp.ikonli.javafx.StackedFontIcon?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="transparentbg" stylesheets="@style.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addaui.addafrontend.PersonalChatsController">
+   <children>
+      <VBox prefHeight="454.0" prefWidth="294.0" styleClass="parent" stylesheets="@style.css" HBox.hgrow="NEVER">
+         <children>
+            <HBox prefHeight="30.0" prefWidth="299.0" styleClass="searchbar">
+               <children>
+                  <TextField prefHeight="26.0" prefWidth="152.0" promptText="Search" stylesheets="@style.css">
+                     <font>
+                        <Font name="Ebrima" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="30.0" right="10.0" top="3.0" />
+                     </HBox.margin>
+                     <styleClass>
+                        <String fx:value="transparentbg" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="4.0" />
+               </VBox.margin>
+            </HBox>
+            <Separator prefWidth="200.0">
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Separator>
+            <ListView fx:id="contact_list" editable="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: White;" styleClass="radius" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </ListView>
+         </children>
+      </VBox>
+      <Separator orientation="VERTICAL" prefHeight="400.0" prefWidth="0.0" />
+      <VBox fx:id="chat_box" prefHeight="389.0" prefWidth="494.0" styleClass="parent" stylesheets="@style.css" HBox.hgrow="ALWAYS">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="284.0" style="-fx-background-color: White;" styleClass="radius">
+               <VBox.margin>
+                  <Insets left="5.0" right="10.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <StackedFontIcon prefHeight="50.0" prefWidth="52.0">
+                     <children>
+                        <ImageView fx:id="profilepic" fitHeight="46.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true" styleClass="radius">
+                           <image>
+                              <Image url="@IMG-20240208-WA0031.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackedFontIcon>
+                  <VBox prefHeight="49.0" prefWidth="141.0">
+                     <children>
+                        <Label fx:id="user_name" prefHeight="18.0" prefWidth="129.0" text="Rishav Mitra">
+                           <font>
+                              <Font name="Calibri Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="last_seen" layoutX="10.0" layoutY="10.0" prefHeight="18.0" prefWidth="129.0" text="Last Seen: 12:30 AM">
+                           <font>
+                              <Font name="Calibri" size="12.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Pane prefHeight="49.0" prefWidth="0.0" HBox.hgrow="ALWAYS" />
+                  <FontIcon accessibleRole="BUTTON" iconColor="#312f2f" iconLiteral="fa-phone" iconSize="20" styleClass="font-icon-button">
+                     <HBox.margin>
+                        <Insets top="15.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+                  <FontIcon accessibleRole="BUTTON" iconColor="#312f2f" iconLiteral="fa-video-camera" iconSize="20" layoutX="279.0" layoutY="42.0" styleClass="font-icon-button">
+                     <HBox.margin>
+                        <Insets left="10.0" top="15.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+                  <FontIcon accessibleRole="BUTTON" iconColor="#312f2f" iconLiteral="fa-ellipsis-v" iconSize="20" layoutX="292.0" layoutY="27.0" styleClass="font-icon-button">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="15.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+               </children>
+            </HBox>
+            <Separator prefHeight="14.0" prefWidth="283.0">
+               <padding>
+                  <Insets top="2.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Separator>
+            <ListView fx:id="chatbox" prefHeight="279.0" prefWidth="378.0" style="-fx-background-color: White;" stylesheets="@style.css" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <styleClass>
+                  <String fx:value="radius" />
+                  <String fx:value="list-cell" />
+                  <String fx:value="list-view" />
+                  <String fx:value="transparentbg" />
+               </styleClass>
+            </ListView>
+            <HBox prefHeight="41.0" prefWidth="374.0" style="-fx-background-color: White;" styleClass="radius">
+               <children>
+                  <FontIcon fx:id="emojipanel" accessibleRole="CONTEXT_MENU" iconColor="#262424" iconLiteral="fa-smile-o" iconSize="20" styleClass="font-icon-button">
+                     <HBox.margin>
+                        <Insets left="5.0" top="15.0" />
+                     </HBox.margin>
+                  </FontIcon>
+                  <FontIcon iconColor="#262424" iconLiteral="fa-paperclip" iconSize="20" styleClass="font-icon-button">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="15.0" />
+                     </HBox.margin>
+                  </FontIcon>
+                  <TextField fx:id="Text" onAction="#Sender" prefHeight="22.0" prefWidth="304.0" promptText="Type a message" style="-fx-text-fill: Black;" styleClass="transparentbg" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <FontIcon fx:id="recordButton" accessibleRole="BUTTON" iconLiteral="fa-microphone" iconSize="20">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="15.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+                  <FontIcon accessibleRole="BUTTON" iconColor="#262424" iconLiteral="fa-paper-plane-o" iconSize="20" onKeyPressed="#Sender" onMouseClicked="#Sender" styleClass="font-icon-button">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" top="15.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </FontIcon>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </VBox>
+   </children>
+</HBox>
