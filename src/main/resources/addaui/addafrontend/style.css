@@ -1,5 +1,5 @@
 .parent{
-    -fx-background-color: rgb(150,50,250);
+    -fx-background-color: rgb(255,205,255);
     -fx-background-radius: 20px;
 }
 
@@ -14,7 +14,7 @@
 
 .searchbar{
     -fx-background-radius: 100px;
-    -fx-background-color: rgb(117,235,170);
+    -fx-background-color: White;
 }
 
 .searcharea{

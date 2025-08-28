@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class HelloApplication extends Application {
     @Override
-    public void start(Stage stage) throws IOException{
+    public void start(@SuppressWarnings("exports") Stage stage) throws IOException{
         Parent root= FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
         Image icon= new Image("C:\\Users\\mrish\\AddaFrontEnd\\src\\main\\resources\\addaui\\addafrontend\\logo.png");
         stage.getIcons().add(icon);
@@ -28,3 +28,4 @@ public class HelloApplication extends Application {
         launch();
     }
 }
+
